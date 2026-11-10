@@ -37,9 +37,8 @@ proxies:
     port: 443
     type: vless
     uuid: fd9fce09-d422-4fe5-aa94-e77515987b4c
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
+    tls: true
+    skip-cert-verify: false
     servername: d3g3sngx74a42t.cloudfront.net
     network: ws
     ws-opts:
@@ -52,6 +51,7 @@ proxies:
     port: 443
     type: vmess
     uuid: 4b292ed3-ef3a-4c89-a5c1-bf95a82bb0c1
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -67,6 +67,7 @@ proxies:
     port: 443
     type: vmess
     uuid: e45ca595-ec9b-4d79-9251-60eb5529eb95
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
