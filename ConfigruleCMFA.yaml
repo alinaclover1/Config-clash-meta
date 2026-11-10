@@ -32,51 +32,51 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: AKUN1
-    server: quiz.int.vidio.com
-    port: 80
-    type: vmess
-    uuid: 396415b0-6f7d-4df3-9d50-1a3ff9115b1a
+  - name: SZ STORE
+    server: 13.249.231.85
+    port: 443
+    type: vless
+    uuid: fd9fce09-d422-4fe5-aa94-e77515987b4c
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: id2-ray.ipservers.xyz
+    servername: d3g3sngx74a42t.cloudfront.net
     network: ws
     ws-opts:
-      path: /JAGOANSSH/
+      path: /vless
       headers:
-        Host: id2-ray.ipservers.xyz
+        Host: d3g3sngx74a42t.cloudfront.net
     udp: true
-  - name: AKUN2
-    server: quiz.int.vidio.com
+  - name: NADIA STORE1
+    server: 13.249.231.85
     port: 443
-    type: vless
-    uuid: 9cf9a9b0-2e2e-45bd-ac6f-5eaa44e30cfe
+    type: vmess
+    uuid: 4b292ed3-ef3a-4c89-a5c1-bf95a82bb0c1
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id1vless.ipservers.xyz
+    servername: d3vaf207v45s96.cloudfront.net
     network: ws
     ws-opts:
-      path: /jagoanssh
+      path: /vmess
       headers:
-        Host: id1vless.ipservers.xyz
+        Host: d3vaf207v45s96.cloudfront.net
     udp: true
-  - name: AKUN3
-    server: quiz.int.vidio.com
+  - name: NADIA STORE2
+    server: 54.192.164.129
     port: 443
-    type: vless
-    uuid: aae98731-898a-4cd3-8c7f-d09af2387d63
+    type: vmess
+    uuid: e45ca595-ec9b-4d79-9251-60eb5529eb95
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id2vless.ipservers.xyz
+    servername: d1nb959atmxqi3.cloudfront.net
     network: ws
     ws-opts:
-      path: /jagoanssh
+      path: /vmess
       headers:
-        Host: id2vless.ipservers.xyz
+        Host: d1nb959atmxqi3.cloudfront.net
     udp: true
 
 proxy-groups:
@@ -85,18 +85,18 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - AKUN1
-      - AKUN2
-      - AKUN3
+      - SZ STORE
+      - NADIA STORE1
+      - NADIA STORE2
 
   - name: MIX-X
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - AKUN1
-      - AKUN2
-      - AKUN3
+      - SZ STORE
+      - NADIA STORE1
+      - NADIA STORE2
       
   - name: IKLAN
     type: select
