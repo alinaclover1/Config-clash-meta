@@ -64,7 +64,7 @@ proxies:
         Host: d3vaf207v45s96.cloudfront.net
     udp: true
   - name: AKUN3
-    server: 54.192.164.129
+    server: 13.249.231.85
     port: 443
     type: vmess
     uuid: e45ca595-ec9b-4d79-9251-60eb5529eb95
