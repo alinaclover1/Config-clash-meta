@@ -37,7 +37,6 @@ proxies:
     port: 443
     type: vless
     uuid: fd9fce09-d422-4fe5-aa94-e77515987b4c
-    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
