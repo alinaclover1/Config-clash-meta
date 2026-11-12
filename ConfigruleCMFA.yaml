@@ -33,7 +33,7 @@ dns:
     - 112.215.203.254
 proxies:
   - name: AKUN1
-    server: 13.249.231.85
+    server: 54.192.164.129
     port: 443
     type: vless
     uuid: fd9fce09-d422-4fe5-aa94-e77515987b4c
@@ -47,7 +47,7 @@ proxies:
         Host: d3g3sngx74a42t.cloudfront.net
     udp: true
   - name: AKUN2
-    server: 13.249.231.85
+    server: 54.192.164.129
     port: 443
     type: vmess
     uuid: 4b292ed3-ef3a-4c89-a5c1-bf95a82bb0c1
@@ -63,7 +63,7 @@ proxies:
         Host: d3vaf207v45s96.cloudfront.net
     udp: true
   - name: AKUN3
-    server: 13.249.231.85
+    server: 54.192.164.129
     port: 443
     type: vmess
     uuid: e45ca595-ec9b-4d79-9251-60eb5529eb95
