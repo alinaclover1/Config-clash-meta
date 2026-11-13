@@ -32,51 +32,49 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: AKUN1
-    server: 54.192.164.129
+  - name: SZSTR
+    server: x1.satella.biz.id
     port: 443
     type: vless
     uuid: fd9fce09-d422-4fe5-aa94-e77515987b4c
     tls: true
     skip-cert-verify: false
-    servername: d3g3sngx74a42t.cloudfront.net
+    servername: upload.iflix.com
+    network: ws
+    ws-opts:
+      path: /satella
+      headers:
+        Host: x1.satella.biz.id
+    udp: true
+  - name: NDSTR1
+    server: nsid.nadiavpnku.my.id
+    port: 443
+    type: vmess
+    uuid: 59940cbd-c927-4d04-878f-383ced8e8edb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: upload.iflix.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: nsid.nadiavpnku.my.id
+    udp: true
+  - name: NDSTR2
+    server: vpnvip.nadia-lestari.my.id
+    port: 443
+    type: vless
+    uuid: 0944ed86-c04e-45fb-ac8a-ef4fac464233
+    tls: true
+    skip-cert-verify: false
+    servername: upload.iflix.com
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: d3g3sngx74a42t.cloudfront.net
-    udp: true
-  - name: AKUN2
-    server: 54.192.164.129
-    port: 443
-    type: vmess
-    uuid: 4b292ed3-ef3a-4c89-a5c1-bf95a82bb0c1
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: d3vaf207v45s96.cloudfront.net
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: d3vaf207v45s96.cloudfront.net
-    udp: true
-  - name: AKUN3
-    server: 54.192.164.129
-    port: 443
-    type: vmess
-    uuid: e45ca595-ec9b-4d79-9251-60eb5529eb95
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: d1nb959atmxqi3.cloudfront.net
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: d1nb959atmxqi3.cloudfront.net
+        Host: vpnvip.nadia-lestari.my.id
     udp: true
 
 proxy-groups:
@@ -85,18 +83,18 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - AKUN1
-      - AKUN2
-      - AKUN3
+      - SZSTR
+      - NDSTR1
+      - NDSTR2
 
   - name: MIX-X
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - AKUN1
-      - AKUN2
-      - AKUN3
+      - SZSTR
+      - NDSTR1
+      - NDSTR2
       
   - name: IKLAN
     type: select
